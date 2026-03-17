@@ -1,5 +1,5 @@
 // Get API base URL from environment or default to localhost for development
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_UR;
 
 console.log('[API Service] Using API_BASE_URL:', API_BASE_URL);
 
@@ -28,7 +28,7 @@ class ApiService {
     options: RequestInit = {}
   ): Promise<T> {
     const url = `${API_BASE_URL}${endpoint}`;
-    
+
     try {
       const response = await fetch(url, {
         headers: {
